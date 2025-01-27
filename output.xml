@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on darwin)" generated="2025-01-22T21:40:43.431647" rpa="false" schemaversion="5">
+<suite id="s1" name="Lab7-002" source="/Users/musee/Documents/GitHub/Lab7-Test-Automation/Lab7-002.robot">
+<test id="s1-t1" name="Empty Destination" line="8">
+<kw name="Open Browser To Form Page" owner="resource" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.534583" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x107e47e00&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.534427" elapsed="0.000175"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<arg>${chrome_options.binary_location}</arg>
+<arg>${CHROME_BROWSER_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.534670" elapsed="0.000253"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.535200" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x107e47b60&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.534982" elapsed="0.000231"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-22T21:40:43.535357" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-22T21:40:43.535435" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-22T21:40:43.535486" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-22T21:40:43.535263" elapsed="0.003092">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${FORM URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.538492" elapsed="0.000026"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.538568" elapsed="0.000011"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.534093" elapsed="0.004548">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.538766" elapsed="0.000064"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.533719" elapsed="0.005189">Setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-t2" name="Empty Email" line="9">
+<kw name="Open Browser To Form Page" owner="resource" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.539549" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x107e6ead0&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.539433" elapsed="0.000130"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<arg>${chrome_options.binary_location}</arg>
+<arg>${CHROME_BROWSER_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.539613" elapsed="0.000207"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.540002" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x107e6e850&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.539865" elapsed="0.000149"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-22T21:40:43.540136" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-22T21:40:43.540177" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-22T21:40:43.540213" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-22T21:40:43.540058" elapsed="0.000702">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${FORM URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.540823" elapsed="0.000012"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.540872" elapsed="0.000009"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.539310" elapsed="0.001615">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.541062" elapsed="0.000047"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.539147" elapsed="0.001993">Setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-t3" name="Invalid Email" line="10">
+<kw name="Open Browser To Form Page" owner="resource" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.541611" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x107e6f110&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.541508" elapsed="0.000117"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<arg>${chrome_options.binary_location}</arg>
+<arg>${CHROME_BROWSER_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.541673" elapsed="0.000207"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.542162" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x107e6f390&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.542028" elapsed="0.000147"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-22T21:40:43.542300" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-22T21:40:43.542336" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-22T21:40:43.542367" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-22T21:40:43.542221" elapsed="0.000650">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${FORM URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.542929" elapsed="0.000012"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.542978" elapsed="0.000009"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.541401" elapsed="0.001626">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.543110" elapsed="0.000043"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.541236" elapsed="0.001948">Setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-t4" name="Empty Phone Number" line="11">
+<kw name="Open Browser To Form Page" owner="resource" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.543554" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x107f7cb00&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.543474" elapsed="0.000249"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<arg>${chrome_options.binary_location}</arg>
+<arg>${CHROME_BROWSER_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.543788" elapsed="0.000351"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.544520" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x107f7cc30&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.544229" elapsed="0.000326"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-22T21:40:43.544721" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-22T21:40:43.544769" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-22T21:40:43.544803" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-22T21:40:43.544620" elapsed="0.000723">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${FORM URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.545428" elapsed="0.000015"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.545488" elapsed="0.000011"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.543391" elapsed="0.002155">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.545647" elapsed="0.000051"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.543270" elapsed="0.002461">Setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<test id="s1-t5" name="Invalid Phone Number" line="12">
+<kw name="Open Browser To Form Page" owner="resource" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.546149" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x107f7d5b0&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.546052" elapsed="0.000110"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<arg>${chrome_options.binary_location}</arg>
+<arg>${CHROME_BROWSER_PATH}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.546205" elapsed="0.000201"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-22T21:40:43.546586" level="INFO">${service} = &lt;selenium.webdriver.chrome.service.Service object at 0x107f7d6e0&gt;</msg>
+<var>${service}</var>
+<arg>sys.modules["selenium.webdriver.chrome.service"].Service(executable_path=r"${CHROME_DRIVER_PATH}")</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.546449" elapsed="0.000148"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-22T21:40:43.546707" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2025-01-22T21:40:43.546741" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-01-22T21:40:43.546770" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<arg>service=${service}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2025-01-22T21:40:43.546635" elapsed="0.000618">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${FORM URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.547338" elapsed="0.000011"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2025-01-22T21:40:43.547384" elapsed="0.000009"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.545959" elapsed="0.001471">NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-22T21:40:43.547509" elapsed="0.000042"/>
+</kw>
+<status status="FAIL" start="2025-01-22T21:40:43.545826" elapsed="0.001753">Setup failed:
+NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<status status="FAIL" start="2025-01-22T21:40:43.432599" elapsed="0.115156"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="5" skip="0" id="s1" name="Lab7-002">Lab7-002</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
